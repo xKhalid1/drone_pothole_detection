@@ -13,13 +13,19 @@ Drone Systems, specialized drones like Reebot UniDrone E900, have long flight ti
 
 Challenges:
 1) Duplicate detections
+
 Same pothole detected multiple times in the same frame.
+
 Solution:
+
 added 500 frame detection cooldown to fix it
 
-3) false positives
+4) false positives
+
 Road textures can be misclassified as potholes.
+
 Solution:
+
 Increased YOLO confidence threshold.
 
 
