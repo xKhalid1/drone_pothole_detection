@@ -1,4 +1,4 @@
-Drone Detection and Inspection Project for Tuwaiq Bootcampt.
+Drone Pothole Detection and Inspection Project.
 
 This project is an drone-based pothole detection system that uses a YOLO-based object detection model to detect road potholes using a pre-recorded video as a camera input. When a pothole is detected, pause the mission and lower the altitude and start orbiting it for close inspection before continuing the mission route.
 
