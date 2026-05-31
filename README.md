@@ -20,7 +20,7 @@ Solution:
 
 added 500 frame detection cooldown to fix it
 
-4) false positives
+2) false positives
 
 Road textures can be misclassified as potholes.
 
