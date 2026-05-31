@@ -4,6 +4,7 @@ This project is an drone-based pothole detection system that uses a YOLO-based o
 the system simulates a drone orbiting it for inspection before continuing its mission route.
 
 Existing Solutions:
+
 Manual inspection, requires teams to physically check the road.
 Cars Dashcham, high cost due to fuel and maintainace. 
 drone systems, specialized drones like Reebot UniDrone E900, have long flight time, can deploy a swarm to cover large area. but it's mainly for taking videos then processing them later.
