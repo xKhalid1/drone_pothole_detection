@@ -96,10 +96,10 @@ Create a Gazebo simulation to test the drone inspection behavior without using t
 
 ## Components
 
-| X500 Drone      | Quadcopter model used in the simulation                              |
-| Gimbal Camera   | Keeps the camera pointed at the inspection area                      |
-| Depth Camera    | Provides depth information for future obstacle detection and mapping |
-| Custom World    | Road environment with potholes                                       |
+| X500 Drone      |
+| Gimbal Camera   | 
+| Depth Camera    |
+| Custom World    |
 
 ---
 
