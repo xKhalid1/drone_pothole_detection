@@ -117,7 +117,7 @@ Create a Gazebo simulation to test the drone inspection behavior without using t
 
 Download the following files:
 
-* `world.sdf` (custom Gazebo world)
+* `city_building.sdf` (custom Gazebo world)
 * `x500_gd` (drone model with gimbal and depth cameras)
 * `city_building.tar.xz` (building model)
 * `pothole.tar.xz` (pothole model)
