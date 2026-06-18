@@ -1,0 +1,182 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.9">
+  <world name="city_pothole">
+
+    <!-- Physics — required rate for PX4 sensor integration -->
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <!-- Required by PX4 sensor plugins via server.config -->
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+
+    <!-- GPS home position — required for NavSat/GPS sensor -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>24.856396</latitude_deg>
+      <longitude_deg>46.706253</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+
+    <!-- Sun -->
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+    </light>
+
+    <!-- Ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>3 3</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction><ode/></friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>1500 1500</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.1 0.1 0.1 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name= "box">
+    <static>true</static>
+    <pose>26.93 -28.14 10.44 0 0 0</pose>
+    <link name = "box_link">
+    <visual name = "visual">    
+        <geometry>
+            <box><size> 35 20 20 </size></box>
+        </geometry>
+        <material>
+            <diffuse> 1 0 0 0  </diffuse>
+        </material>
+    </visual>
+    <collision name = "collision">
+        <geometry>
+            <box>
+                <size> 35 20 20 </size>
+            </box>
+        </geometry>
+    </collision>
+    </link>
+    </model>
+
+    <model name= "first_cylinder">
+    <static>true</static>
+    <pose>0.09 0.18 0.5 0 0 0</pose>
+
+    <link name = "first_cylinder_link">
+
+    <visual name = "visual">    
+
+        <geometry>
+            <cylinder>
+                <radius> 0.5 </radius>
+                <length> 0.5 </length> 
+            </cylinder>
+        </geometry>
+    
+        <material>
+            <diffuse> 0 0 1 1  </diffuse>
+        </material>
+
+    </visual>
+    <collision name = "collision">
+        <geometry>
+            <cylinder>
+                <radius> 0.5 </radius>
+                <length> 0.5 </length> 
+            </cylinder>
+        </geometry>
+    
+    </collision>
+
+    </link>
+
+    </model>
+
+    <model name= "box1">
+    <static>true</static>
+    <pose>26.93 -64.32 10.44 0 0 0</pose>
+    <link name = "box_link">
+    <visual name = "visual">    
+        <geometry>
+            <box><size> 35 20 20 </size></box>
+        </geometry>
+        <material>
+            <diffuse> 1 0 0 0  </diffuse>
+        </material>
+    </visual>
+    <collision name = "collision">
+        <geometry>
+            <box>
+                <size> 35 20 20 </size>
+            </box>
+        </geometry>
+    </collision>
+    </link>
+    </model>
+
+  <include>
+    <uri>model://city_building</uri>
+    <name>city_building1</name>
+    <pose>0 0 15.94 0 0 0</pose>
+  </include>
+
+  <include>
+    <static>true</static>
+    <uri>model://pothole</uri>
+    <name>pothole1</name>
+    <pose>0 -46.62 6.42 0 0 0</pose>
+  </include>
+
+  <include>
+    <static>true</static>
+    <uri>model://pothole</uri>
+    <name>pothole3</name>
+    <pose>35.39 -116.16 6.42 0 0 0</pose>
+  </include>
+
+  <include>
+    <static>true</static>
+    <uri>model://pothole</uri>
+    <name>pothole4</name>
+    <pose>-56.38 -152.90 6.65 0 0 0</pose>
+  </include>
+
+  </world>
+</sdf>
