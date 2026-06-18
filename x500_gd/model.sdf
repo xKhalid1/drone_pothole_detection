@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sdf version="1.9">
+  <model name="x500_gd">
+    <include merge="true">
+      <uri>model://x500</uri>
+    </include>
+    <include merge="true">
+      <uri>model://gimbal</uri>
+      <pose>0 0 0.26 0 0 3.14</pose>
+    </include>
+    <joint name="cgo3_mount_link_AttachJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>cgo3_mount_link</child>
+    </joint>
+    <include merge="true">
+      <uri>model://OakD-Lite1</uri>
+      <pose>.12 .03 .200 0 1.5708 0</pose>
+    </include>
+    <joint name="camera_link1_AttachJoint" type="fixed">
+      <parent>base_link</parent>
+      <child>camera_link1</child>
+      <pose relative_to="base_link">.12 .03 .200 0 1.5708 0</pose>
+    </joint>
+  </model>
+</sdf>
